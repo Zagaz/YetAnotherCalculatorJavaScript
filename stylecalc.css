@@ -1,0 +1,83 @@
+.full{
+    text-align: center;
+}
+.classrow{
+
+
+   margin: auto;
+   padding: 10px 0px;;
+   
+}
+.cell{
+
+    text-align: center;
+  
+ 
+}
+button{
+    box-shadow: none;
+    border: none;
+    margin: auto;
+    margin-top: auto;
+    width: 5rem;
+    height: 10vh;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    
+    color: mintcream;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+ 
+
+   
+    
+
+    
+}
+button.grey{
+    background-color: rgb(189, 191, 194);
+}
+
+
+
+button.green{
+    background-color: rgb(15, 185, 92);
+    
+    
+}
+button.blue{
+    background-color: rgb(109, 166, 231);
+}
+button.orange{
+    background-color: rgb(247, 178, 113);
+}
+button.orange.equal{
+    width:30vw;
+}
+.number{
+   
+    font-size: 3em;
+
+   
+    margin: auto;
+    
+}
+.cOutput{
+    font-size: 5rem;
+    text-align: right;
+    color: rgb(87, 86, 86);
+    background-color: rgb(235, 232, 232);
+    border: 1px dashed violet;
+   
+ 
+    border-radius:15px;
+    width: 50rem;
+    
+    margin: 1rem auto;
+    
+    
+}
+.corpo{
+    background-color: rgb(95, 95, 94);
+  
+}

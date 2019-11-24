@@ -5,54 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="stylecalc.css">
+    <title>Title</title>
 </head>
 
 <body>
-    <h1 id="titulo">Analisador de número</h1>
 
-   <div class="box">
-       <label for="numero">Número de 1 à 100:</label>
-       <input type="number" name="numero" id="numero"> <br> <br>
-       <input type="button" id="add" value="Adicionar"> <br> <br>
+<h1 style="color: red; text-align: center;">Ainda está em produção</h1>
+        <!---Corpo da Calculadora-->
+        <div class=" container">
+                <div class="row corpo">
 
-       <select name="select" id="lista"  size="5"></select> <br> <br>
-       <input type="button" id="finalizar" value="Finalizar">
+                        <!-----Aqui fica a tela------->
+                        <div class="container-fluid containerOutput">
+                                <div class="row">
+                                        <div id="iOutput" class="cOutput">
+                                                0
+                
+                
+                                        </div>
+                
+                                </div>
+                        </div>
+                        
+                        <!-----Aqui contem todos os teclados-->
+                        <div id="calccore" class="container">
 
 
-    
+
+                        <!--1st row-->
+                        <div class="row classrow">
+                            <!--CLEAR-->
+                            <div name="nC" value="vC" class="col-3 itemBox cell">
+                                    <button  id="iC" type="button" class="number orange">C</button>
+                            </div>
+                            <!--Square Root-->
+                            <div  name="nSqrt" value="vSqrt" class="col-3 cell green">
+                                    <button id="iSqrt" type="button" class="number green">  &radic; </button>
+                              
+                            </div>
+                            <!--Percentage-->
+                            <div  name="nPct" value="vPct" class="col-3  cell green">
+                                
+                                    <button id="iPct" type="button" class="number green"> % </button>
+                            </div>
+                            <!--Divisiion-->
+                            <div  name="nRatio" value="vRatio" class="col-3 cell op">
+                                <button id="iRatio" type="button" class="number blue"> &#8725;</button>
+                                
+                            </div>
+                
+                        </div>
+                
+                        <!--2nd row-->
+                        
+                        <div class="row classrow">
+                                    <!--7-->
+                                    <div id="i7" name="n7" value="v7" class="col-3 cell ">
+                                            <button type="button" class="number grey">7</button>
+                                    </div>
+                                    <!--8-->
+                                    <div id="i8" name="n8" value="v8" class="col-3 cell ">
+                                            <button type="button" class="number grey">8</button>
+                                    </div>
+                                    <!--9-->
+                                    <div id="i9" name="n9" value="v9" class="col-3 cell ">
+                                            <button type="button" class="number grey">9</button>
+                                    </div>
+                                    <!--Multiply-->
+                                    <div id="iMulti" name="nMulti" value="vMulti" class="col-3  cell op">
+                                            <button type="button" class="number blue">&#8727;</button>
+                                    </div>
+                               
+                        </div>
+                
+                
+                        <!--3rd row-->
+                        <div class="row classrow">
+                            <!--4-->
+                            <div id="i4" name="n4" value="v4" class="col-3 cell ">
+                                    <button type="button" class="number grey">4</button>
+                            </div>
+                            <!--5-->
+                            <div id="i5" name="n5" value="v5" class="col-3 cell ">
+                                    <button type="button" class="number grey">5</button>
+                            </div>
+                            <!--6-->
+                            <div id="i6" name="n6" value="v6" class="col-3 cell ">
+                                    <button type="button" class="number grey">6</button>
+                            </div>
+                            <!--subtra-->
+                            <div id="iSubtra" name="nSubtra" value="vSubtra" class="col-3 cell op">
+                                    <button type="button" class="number blue">&#8722;</button>
+                            </div>
+                            
+                        </div>
+                
+                        <!--4th row-->
+                        <div class="row classrow">
+                            <!--1-->
+                            <div  name="n1" value="v1" class="col-3 cell ">
+                                    <button id="i1" type="button" class="number grey">1</button>
+                            </div>
+                            <!--2-->
+                            <div name="n2" value="v2" class="col-3 cell">
+                                    <button id="i2"  type="button" class="number grey">2</button>
+                            </div>
+                            <!--3-->
+                            <div name="n3" value="v3" class="col-3 cell">
+                                    <button  id="i3" type="button" class="number grey">3</button>
+                            </div>
+                            <!--PLUS-->
+                            <div name="n3" value="v3" class="col-3 cell ">
+                                    <button  id="iPlus"  type="button" class="number blue">&#43;</button>
+                            </div>
+                            
+                        </div>
+                        
+                        <!--5th row-->
+                        <div class="row classrow">
+                
+                                
+                            <!--DOT . -->
+                            <div  name="nDot" value="vDot" class="col-3 cell">
+                                    <button id="iDot" type="button" class="number blue">.</button>
+                            </div>
+                            <!--0 zero-->
+                            <div name="n0" value="v0" class="col-3 cell ">
+                                    <button id="i0"  type="button" class="number blue">0</button>
+                            </div>
+                            <!--equal-->
+                            <div  name="nEqual" value="vEqual" class="col-6 cell">
+                                    <button  id="iEqual" type="button" class="number orange equal">        &#61;</button>
+                            </div>
+                
+                
+                        </div>
+                
+                        </div>
+                </div>
+
+        </div>
+        
+        
 
 
-   </div>
-
-   <div id="resposta">
-
-    
-    </div>
 
 
 
-   <script src="main.js"></script>        
-  
 
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-         
-    
-   
-
-
-
-
-
