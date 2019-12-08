@@ -140,4 +140,5 @@ button.orange.equal{
 .containerWidth{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
