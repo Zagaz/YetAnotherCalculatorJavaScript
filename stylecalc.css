@@ -139,5 +139,6 @@ button.orange.equal{
 }
 .containerWidth{
    margin: auto;
+   height: fit-content;
    
 }
