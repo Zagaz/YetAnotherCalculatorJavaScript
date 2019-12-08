@@ -121,8 +121,7 @@ button.orange.equal{
 
 }
 .containerWidth {
-    display: flex;
-    justify-content: space-evenly;
+    margin: 0px 5px;
 }
 
 .bt{
