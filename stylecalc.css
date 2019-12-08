@@ -109,6 +109,7 @@ button.orange.equal{
     max-width: 80%;
     max-height: 80px;
     min-height: 80px;
+    display: flex;
     justify-content: right;
     text-align: right;
     padding-right:10px ;
@@ -120,9 +121,7 @@ button.orange.equal{
     
 
 }
-.containerWidth {
-    margin: 0px 5px;
-}
+
 
 .bt{
     
@@ -137,4 +136,8 @@ button.orange.equal{
  
    
 
+}
+.containerWidth{
+    display: flex;
+    justify-content: center;
 }
