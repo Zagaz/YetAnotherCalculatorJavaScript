@@ -120,6 +120,10 @@ button.orange.equal{
     
 
 }
+.containerWidth {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .bt{
     
