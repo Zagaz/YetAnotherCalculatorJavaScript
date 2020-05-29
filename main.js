@@ -1,12 +1,11 @@
 
-var arrayNum1   =[]; //Primeiro parametro
-var arrayNum2   =[]; //Segundo parametro
-var arrayTest    =[];
-var arrayNumeros =[];
+var arrayNum1        = []; //Primeiro parametro
+var arrayNum2        = []; //Segundo parametro
+var arrayTest        = [];
+var arrayNumeros     = [];
 var arrayNumerosTemp = [];
 var operador;
 var operadorCT = 0;
-
 
 //PASSO 1 -----------------------------------------
 
@@ -40,7 +39,7 @@ function limpar() {
     operador  = "";
     zeraArrayNum();
     operadorCT = 0;
-    disableEqual('auto');
+    disableEqual('none');
 }
     
 function computar(c){
@@ -94,9 +93,18 @@ function zeraArrayNum() {
     arrayNumerosTemp = [];  
 }
     
-
 function disableEqual(d) {
     document.getElementById('iEqual').style.pointerEvents = d;
 }
+
+function mousePointer(id){
     
-      
+    var pointer = document.getElementById(id); 
+    pointer.style.cursor = "Pointer";
+}
+
+function mouseDefault(id){
+
+    var pointer = document.getElementById(id); 
+    pointer.style.cursor = "default";
+}
