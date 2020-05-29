@@ -4,8 +4,7 @@ var arrayNum2        = []; //Segundo parametro
 var arrayTest        = [];
 var arrayNumeros     = [];
 var arrayNumerosTemp = [];
-var operador;
-var operadorCT = 0;
+
 
 //PASSO 1 -----------------------------------------
 
