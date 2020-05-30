@@ -44,7 +44,6 @@ function limpar() {
 function computar(c){
     arrayNumeros.push(c);
     arrayNumerosTemp = [];
-    addTela(0);
 }
      
 function raiz(){
