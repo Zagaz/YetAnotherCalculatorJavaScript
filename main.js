@@ -40,6 +40,11 @@ function limpar() {
     operadorCT = 0;
     disableEqual('none');
 }
+function intro() {
+    limpar(); 
+    addTela("Hello World!");
+   
+}
     
 function computar(c){
     arrayNumeros.push(c);
