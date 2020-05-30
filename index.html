@@ -13,7 +13,7 @@
         <title>Yet Another Calculator 1.0</title>
 </head>
 
-<body onload="intro()">
+<body >
 
                 <!---Corpo da Calculadora-->
         <div class = "container">
@@ -152,9 +152,9 @@
 
 
                                         <!--DOT . -->
-                                        <div name="nDot" value="vDot" class="col-3 cell"  onclick="add('iDot')">
+                                        <div id="iDot" name="nDot" value="vDot" class="col-3 cell"  onclick="add('iDot'),point('idot')">
                                                 
-                                                <div id="iDot" class="bt number grey">.</div>
+                                                <div  class="bt number grey">.</div>
                                         </div>
                                         <!--0 zero-->
                                         <div name="n0" value="v0" class="col-3 cell "  onclick="add('i0')">
@@ -162,7 +162,7 @@
                                                 <div id="i0" class="bt number grey">0</div>
                                         </div>
                                         <!--equal-->
-                                        <div name="nEqual" id="iEqual" value="vEqual" class="col-6 cell"  onclick="equal()" >
+                                        <div name="nEqual" id="iEqual" value="vEqual" class="col-6 cell"  onclick="equal('iEqual')" >
                                                
                                                        </button>
                                                         <div class="bt number orange"> &#61;</div>

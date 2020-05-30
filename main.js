@@ -5,6 +5,10 @@ var arrayTest        = [];
 var arrayNumeros     = [];
 var arrayNumerosTemp = [];
 
+document.body.onload = intro();
+
+
+
 
 //PASSO 1 -----------------------------------------
 
@@ -15,8 +19,9 @@ function add(value) {
     if (arrayNumerosTemp.length <13) {
         num = document.getElementById(value).innerText;
         addArray(num);
-        disableEqual('auto');
+        disableKey('iEqual','auto');
     }
+   
 }
 
 //PASSO 2 -----------------------------------------
@@ -29,7 +34,12 @@ arrayNumeros.push(n);
 arrayNumerosTemp.push(n);
 addTela(arrayNumerosTemp.join(""))
 }
-
+// INTRO () is called once on load.
+function intro() {
+    limpar(); //Resets the calculator. 
+    addTela("Hello World!"); 
+   
+}
 //RESET   
 function limpar() {
     addTela(0);
@@ -38,17 +48,22 @@ function limpar() {
     operador  = "";
     zeraArrayNum();
     operadorCT = 0;
-    disableEqual('none');
-}
-function intro() {
-    limpar(); 
-    addTela("Hello World!");
    
+    disableKey('iEqual','none');
+    disableKey('iDot','auto');
 }
     
 function computar(c){
     arrayNumeros.push(c);
     arrayNumerosTemp = [];
+    disableKey('iDot','auto');
+}
+
+function  point(p) {
+   
+    var point = p;
+    disableKey('iDot','none');
+    
 }
      
 function raiz(){
@@ -65,15 +80,16 @@ function pctgem(){
     addTela(pct + "%");
     zeraArrayNum();
     disableEqual('none');
+    disableKey('iEqual','auto');
 }    
        
-function equal() {
+function equal(key) {
     let numero = arrayNumeros.join("");
     let operacao = eval (numero);
     addTela(operacao);
     zeraArrayNum();
     arrayNumeros=[operacao]; //Coloca o valor ANS
-    disableEqual('none');
+    disableKey(key,'none');
 }
 
 //Printa no InneHTML da tela o valor.
@@ -96,8 +112,8 @@ function zeraArrayNum() {
     arrayNumerosTemp = [];  
 }
     
-function disableEqual(d) {
-    document.getElementById('iEqual').style.pointerEvents = d;
+function disableKey(key,status) {
+    document.getElementById(key).style.pointerEvents = status;
 }
 
 function mousePointer(id){
