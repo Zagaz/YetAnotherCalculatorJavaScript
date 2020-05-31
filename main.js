@@ -94,9 +94,17 @@ function  point(p) {
 }
      
 function raiz(){
+    let temp;
     arrayNumeros.shift();
-    let temp =arrayNumeros.join("");
-    
+
+    if(ans == ""){
+     temp = eval (arrayNumeros.join(""));
+    }
+
+    if(ans != ""){
+        temp = ans;
+
+    }
    
     //let temp = arrayNumeros.join(""); 
    let raiz = Math.sqrt(temp);
@@ -107,13 +115,20 @@ function raiz(){
    
 function pctgem(){ 
     arrayNumeros.shift();
+    let temp;
+    if (ans == ""){
+
+        temp = eval (arrayNumeros.join("")); 
+       
+    }
+    if (ans != ""){
+        temp = ans;
+    }
     
-    let temp = eval (arrayNumeros.join("")); 
-    //temp = 5;
     let pct = temp/100;
     addTela(pct);
     zeraArrayNum();
-     disableKey('iEqual','auto');
+    disableKey('iEqual','auto');
 }    
        
 function equal(key) {
