@@ -94,20 +94,26 @@ function  point(p) {
 }
      
 function raiz(){
-    let temp = arrayNumeros.join(""); 
-    let raiz = Math.sqrt(temp);
-    addTela(raiz);
-    zeraArrayNum();
-    disableEqual('none');
+    arrayNumeros.shift();
+    let temp =arrayNumeros.join("");
+    alert (temp);
+   
+    //let temp = arrayNumeros.join(""); 
+   let raiz = Math.sqrt(temp);
+   addTela(raiz);
+   // zeraArrayNum();
+  //  disableKey('iEqual','auto');
 }
    
-function pctgem(){  
-    let temp = eval ( arrayNumeros.join("")); 
+function pctgem(){ 
+    arrayNumeros.shift();
+    
+    let temp = eval (arrayNumeros.join("")); 
+    //temp = 5;
     let pct = temp/100;
-    addTela(pct + "%");
+    addTela(pct);
     zeraArrayNum();
-    disableEqual('none');
-    disableKey('iEqual','auto');
+     disableKey('iEqual','auto');
 }    
        
 function equal(key) {
