@@ -96,7 +96,7 @@ function  point(p) {
 function raiz(){
     arrayNumeros.shift();
     let temp =arrayNumeros.join("");
-    alert (temp);
+    
    
     //let temp = arrayNumeros.join(""); 
    let raiz = Math.sqrt(temp);
