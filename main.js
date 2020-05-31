@@ -4,10 +4,11 @@ var arrayNum2        = []; //Segundo parametro
 var arrayTest        = [];
 var arrayNumeros     = [];
 var arrayNumerosTemp = [];
+var ans         ;
+var lastNumber;
+var isEqual = false;
 
 document.body.onload = intro();
-
-
 
 
 //PASSO 1 -----------------------------------------
@@ -17,6 +18,7 @@ document.body.onload = intro();
 
 function add(value) {
     if (arrayNumerosTemp.length <13) {
+        isEqual = false;
         num = document.getElementById(value).innerText;
         addArray(num);
         disableKey('iEqual','auto');
@@ -34,36 +36,61 @@ arrayNumeros.push(n);
 arrayNumerosTemp.push(n);
 addTela(arrayNumerosTemp.join(""))
 }
+
 // INTRO () is called once on load.
 function intro() {
     limpar(); //Resets the calculator. 
     addTela("Hello World!"); 
-   
+    console.log(lastNumber)
 }
+   
 //RESET   
 function limpar() {
     addTela(0);
+    isEqual = false;
     arrayNum1 = [];
     arrayNum2 = [];
     operador  = "";
     zeraArrayNum();
-    operadorCT = 0;
-   
     disableKey('iEqual','none');
     disableKey('iDot','auto');
+    arrayNumeros.push('(');
+    ans ="";
 }
     
 function computar(c){
+    
+    
+if(!isEqual){
+    addTela(arrayNumerosTemp.join("")); 
     arrayNumeros.push(c);
-    arrayNumerosTemp = [];
+    arrayNumerosTemp = []; 
     disableKey('iDot','auto');
+    isEqual = false;
+
+
+}
+if(isEqual){
+    arrayNumeros.push(ans);
+    arrayNumeros.push(c);
+    disableKey('iDot','auto');
+    isEqual = false;
 }
 
+          
+
+
+
+
+
+       
+       
+        } 
+
+
 function  point(p) {
-   
     var point = p;
     disableKey('iDot','none');
-    
 }
      
 function raiz(){
@@ -84,19 +111,28 @@ function pctgem(){
 }    
        
 function equal(key) {
+    arrayNumeros.push(')')
     let numero = arrayNumeros.join("");
     let operacao = eval (numero);
+    console.log(operacao);
     addTela(operacao);
-    zeraArrayNum();
-    arrayNumeros=[operacao]; //Coloca o valor ANS
+    arrayNumeros = []; 
+    ans = operacao;
+    arrayNumerosTemp = [];
+    arrayNumeros.push('(')
+    
+    isEqual = true;
+    
     disableKey(key,'none');
 }
 
 //Printa no InneHTML da tela o valor.
 function addTela(n) {
+    //
     var telaTemp = n;
     let tela = document.getElementById("iOutput");
     tela.value = telaTemp;
+    
 }
 
 //Evita que o primeiro valor da parcela seja / ou * .
