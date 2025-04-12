@@ -1,4 +1,4 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FZagaz%2FReactSimpleProject&count_bg=%234D550B&title_bg=%23A8B401&icon=javascript.svg&icon_color=%23290823&title=JavaScript&edge_flat=false)](https://hits.seeyoufarm.com)
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2FZagaz%2FYetAnotherCalculatorJavaScript&label=Hits&icon=calculator&color=%23198754)
 
 # About
 Every Dev must develop a calculator. So here's mine!
